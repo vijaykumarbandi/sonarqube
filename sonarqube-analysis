@@ -3,11 +3,9 @@ node{
      git 'https://github.com/vijaykumarbandi/sonarqube.git'
    }
    stage('Compile-Package'){
-      
-     def mvnHome =  tool name: 'M2-HOME', type: 'maven'   
+      def mvnHome =  tool name: 'M2-HOME', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
    }
-   
    stage('SonarQube Analysis') {
         def mvnHome =  tool name: 'M2-HOME', type: 'maven'
         withSonarQubeEnv('sonarqube') { 
