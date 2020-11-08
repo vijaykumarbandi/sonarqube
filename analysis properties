@@ -1,3 +1,4 @@
+JDK=JAVA_HOME
 # Required metadata
 sonar.projectKey=java-sonar-runner-simple
 sonar.projectName=Simple Java project analyzed with the SonarQube Runner
